@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+body {
+   color: #18181B;
+}
+
 .hind-siliguri-light {
   font-family: "Hind Siliguri", sans-serif;
   font-weight: 300;
