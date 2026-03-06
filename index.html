@@ -31,16 +31,33 @@
       type="text/css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
   </head>
   <body>
     <!-- Header starts here  -->
     <header>
-      <nav class=" w-12/13 mx-auto">
-        <div class=" flex items-center gap-1">
-          <p class=" poppins-semibold">English</p>
-          <img src="./assets/logo.png" alt="logo" width="40px" height="40px" />
-          <p class="hind-siliguri-regular">জানালা</p>
+      <nav class="bg-[#BADEFF26] border-b border-[#C6BDBD]">
+        <div class="w-12/13 mx-auto flex items-center justify-between py-5">
+          <div class="flex items-center gap-1 cursor-pointer">
+            <p class="poppins-semibold">English</p>
+            <img
+              src="./assets/logo.png"
+              alt="logo"
+              width="40px"
+              height="40px"
+            />
+            <p class="hind-siliguri-regular">জানালা</p>
+          </div>
+          <div class="flex gap-4">
+            <button class="btn btn-outline btn-primary">
+              <i class="fa-solid fa-circle-question"></i>FAQ
+            </button>
+            <button class="btn btn-outline btn-primary">
+              <i class="fa-solid fa-book-open"></i>Learn
+            </button>
+            <button class="btn btn-outline btn-primary">
+              <i class="fa-solid fa-arrow-right-from-bracket"></i>Logout
+            </button>
+          </div>
         </div>
       </nav>
     </header>
