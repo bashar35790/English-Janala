@@ -1,10 +1,11 @@
 const AllLevels = async () => {
-  const res = await fetch("https://openapi.programming-hero.com/api/levels/all");
+  const res = await fetch(
+    "https://openapi.programming-hero.com/api/levels/all",
+  );
   const data = await res.json();
   displayLevelNo(data.data);
 };
 AllLevels();
-
 
 const displayLessonData = async (levelNo) => {
   const res = await fetch(
@@ -16,6 +17,17 @@ const displayLessonData = async (levelNo) => {
   const lessonContentContainer = document.getElementById("lessonContent");
   lessonContentContainer.innerHTML = "";
   let html = "";
+
+  if (lessons.length === 0) {
+    lessonContentContainer.innerHTML = `
+    <div class="space-y-3 text-center">
+      <img src="./assets/alert-error.png" class="w-20 mx-auto" />
+      <p>এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।</p>
+      <h3>নেক্সট Lesson এ যান</h3>
+    </div>
+  `;
+    return;
+  }
 
   lessons.forEach((lesson) => {
     html += `
